@@ -31,4 +31,16 @@ Eco_Shop is a modern and responsive e-commerce web application built with a vani
 
 1.  **Prerequisites**: Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-2.  **Clone/Download the repository**.
+2.  **Clone/Download the repository**.<br/><br/>
+
+## Home Page
+![1777463891159](image/README/1777463891159.png)<br/><br/>
+
+## Product Page
+![1777463927425](image/README/1777463927425.png)<br/><br/>
+
+## Category Page
+![1777463954790](image/README/1777463954790.png)<br/><br/>
+
+## Cart Page
+![1777463998083](image/README/1777463998083.png)<br/><br/>

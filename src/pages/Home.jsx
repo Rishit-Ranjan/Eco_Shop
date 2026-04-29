@@ -132,7 +132,7 @@ export default function Home() {
                   </Link>
                   <p className="text-natural-text/70 text-sm mb-4 line-clamp-2">{product.description}</p>
                   <div className="mt-auto flex items-center justify-between">
-                    <span className="text-xl font-serif font-semibold text-sage-dark">${product.price.toFixed(2)}</span>
+                    <span className="text-xl font-serif font-semibold text-sage-dark">₹{Math.round(product.price)}</span>
                     <button onClick={() => addToCart(product)} className="bg-sage-leaf text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-sage-leaf-hover transition">
                       Add to Cart
                     </button>

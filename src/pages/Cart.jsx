@@ -66,13 +66,13 @@ export default function Cart() {
                   {/* Price */}
                   <div className="col-span-2 flex justify-between sm:justify-center mb-2 sm:mb-0">
                     <span className="sm:hidden text-sm font-medium text-natural-text/70">Price</span>
-                    <span className="text-sage-dark font-medium">${item.price.toFixed(2)}</span>
+                    <span className="text-sage-dark font-medium">₹{Math.round(item.price)}</span>
                   </div>
 
                   {/* Total */}
                   <div className="col-span-2 flex justify-between sm:justify-center">
                     <span className="sm:hidden text-sm font-medium text-natural-text/70">Total</span>
-                    <span className="text-sage-leaf font-serif font-semibold">${(item.price * item.quantity).toFixed(2)}</span>
+                    <span className="text-sage-leaf font-serif font-semibold">₹{Math.round(item.price * item.quantity)}</span>
                   </div>
                 </li>))}
             </ul>
@@ -87,7 +87,7 @@ export default function Cart() {
             <div className="space-y-4 mb-6">
               <div className="flex justify-between text-natural-text/80">
                 <span>Subtotal</span>
-                <span>${cartTotal.toFixed(2)}</span>
+                <span>₹{Math.round(cartTotal)}</span>
               </div>
               <div className="flex justify-between text-natural-text/80">
                 <span>Shipping</span>
@@ -95,13 +95,13 @@ export default function Cart() {
               </div>
               <div className="flex justify-between text-natural-text/80">
                 <span>Tax</span>
-                <span>${(cartTotal * 0.1).toFixed(2)}</span>
+                <span>₹{Math.round(cartTotal * 0.18)} (GST 18%)</span>
               </div>
             </div>
 
             <div className="border-t border-natural-border pt-4 mb-8 flex justify-between items-center">
               <span className="text-lg font-serif font-semibold text-sage-dark">Total</span>
-              <span className="text-2xl font-serif font-semibold text-sage-leaf">${(cartTotal * 1.1).toFixed(2)}</span>
+              <span className="text-2xl font-serif font-semibold text-sage-leaf">₹{Math.round(cartTotal * 1.18)}</span>
             </div>
 
             <button onClick={() => navigate('/checkout')} className="w-full bg-sage-leaf hover:bg-sage-leaf-hover text-white font-serif font-semibold py-4 rounded-[32px] flex items-center justify-center transition soft-shadow shadow-[0_10px_30px_-15px_rgba(113,125,107,0.3)]">

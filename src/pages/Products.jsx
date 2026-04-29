@@ -50,11 +50,11 @@ export default function Products() {
 
             {/* Price Filter */}
             <div>
-              <h4 className="font-medium text-sage-dark mb-3">Price Range: Up to ${priceRange}</h4>
+              <h4 className="font-medium text-sage-dark mb-3">Price Range: Up to ₹{priceRange}</h4>
               <input type="range" min="0" max="500" step="10" value={priceRange} onChange={(e) => setPriceRange(Number(e.target.value))} className="w-full cursor-pointer accent-indigo-600"/>
               <div className="flex justify-between text-xs text-natural-text/70 mt-2">
-                <span>$0</span>
-                <span>$500+</span>
+                <span>₹0</span>
+                <span>₹500+</span>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function Products() {
                     </div>
                     <p className="text-natural-text/70 text-sm mb-4 line-clamp-2">{product.description}</p>
                     <div className="mt-auto flex items-center justify-between">
-                      <span className="text-xl font-serif font-semibold text-sage-dark">${product.price.toFixed(2)}</span>
+                      <span className="text-xl font-serif font-semibold text-sage-dark">₹{Math.round(product.price)}</span>
                       <button onClick={() => addToCart(product)} className="bg-sage-leaf text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-sage-leaf-hover transition">
                         Add to Cart
                       </button>

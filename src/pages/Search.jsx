@@ -44,7 +44,7 @@ export default function Search() {
                       <span className="text-xs font-medium text-sage-dark/80">{product.rating}</span>
                     </div>
                     <div className="mt-auto flex items-center justify-between">
-                      <span className="font-serif font-semibold text-sage-dark">${product.price.toFixed(2)}</span>
+                      <span className="font-serif font-semibold text-sage-dark">₹{Math.round(product.price)}</span>
                       <button onClick={() => addToCart(product)} className="text-sage-leaf text-sm font-semibold hover:underline">
                         Add
                       </button>

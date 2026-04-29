@@ -49,7 +49,7 @@ export default function ProductView() {
           </div>
 
           <div className="text-3xl font-serif font-semibold text-sage-dark mb-6">
-            ${product.price.toFixed(2)}
+            ₹{Math.round(product.price)}
           </div>
 
           <p className="text-natural-text/80 text-lg mb-8 leading-relaxed">
@@ -95,7 +95,7 @@ export default function ProductView() {
                   <Link to={`/product/${p.id}`} className="block hover:text-sage-leaf mb-1">
                     <h3 className="font-semibold text-sage-dark line-clamp-1">{p.name}</h3>
                   </Link>
-                  <span className="font-serif font-semibold text-sage-dark">${p.price.toFixed(2)}</span>
+                  <span className="font-serif font-semibold text-sage-dark">₹{Math.round(p.price)}</span>
                 </div>
               </div>))}
           </div>

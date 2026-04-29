@@ -1,6 +1,6 @@
 # Eco_Shop
 
-Eco_Shop is a modern and responsive e-commerce web application built with a vanilla JavaScript frontend. It features a dynamic home page, product search with filtering, shopping cart management, and wishlist functionality.
+Eco_Shop is a modern and responsive E-commerce web application built with a React and JavaScript frontend. It features a dynamic home page, product search with filtering, shopping cart management, and wishlist functionality.
 
 ## 🚀 Features
 

@@ -16,8 +16,13 @@ export default function Checkout() {
     });
     const [errors, setErrors] = useState({});
     if (cart.length === 0) {
-        navigate('/cart');
-        return null;
+        return <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="text-center py-20">
+                <h1 className="text-3xl font-serif font-semibold text-sage-dark mb-4">Your cart is empty</h1>
+                <p className="text-natural-text/70 mb-8 max-w-md mx-auto">Your shopping cart is empty. Add some items to proceed with checkout.</p>
+                <a href="/products" className="inline-block bg-sage-leaf hover:bg-sage-leaf-hover text-white font-serif font-semibold py-3 px-8 rounded-[32px] transition soft-shadow">Shop Products</a>
+            </div>
+        </div>;
     }
     const validate = () => {
         const newErrors = {};

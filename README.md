@@ -1,6 +1,6 @@
-# Eco_Shop
+# EcoShop
 
-Eco_Shop is a modern and responsive E-commerce web application built with a React frontend. It features a dynamic home page, product search with filtering, shopping cart management, and wishlist functionality.
+EcoShop is a modern and responsive E-commerce web application built with a React frontend. It features a dynamic home page, product search with filtering, shopping cart management, and wishlist functionality.
 
 ## 🚀 Features
 

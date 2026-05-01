@@ -4,6 +4,7 @@
  */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
+import { ThemeProvider } from './context/ThemeContext';
 import Layout from './components/layout/Layout';
 // Pages
 import Home from './pages/Home';
@@ -18,6 +19,7 @@ import Contact from './pages/Contact';
 import Search from './pages/Search';
 export default function App() {
     return (<CartProvider>
+      <ThemeProvider>
       <Router>
         <Layout>
           <Routes>
@@ -34,5 +36,6 @@ export default function App() {
           </Routes>
         </Layout>
       </Router>
+      </ThemeProvider>
     </CartProvider>);
 }

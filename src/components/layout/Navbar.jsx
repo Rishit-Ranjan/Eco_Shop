@@ -1,8 +1,20 @@
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Search, Menu, X } from 'lucide-react';
+import {useTheme} from '../../context/ThemeContext';
 import { useCart } from '../../context/CartContext';
 import { useState } from 'react';
+
 export default function Navbar() {
+    const ThemeToggle = () => {
+      const { theme, toggleTheme } = useTheme();
+      
+      return (
+        <button onClick={toggleTheme} className="p-2 rounded-lg bg-natural-stone dark:bg-sage-dark transition-colors duration-300">
+          {theme === 'light' ? '🌙' : '☀️'}
+        </button>
+      );
+    };
+
     const { cartCount } = useCart();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (<nav className="bg-[#FCFCFA] sticky top-0 z-50 border-b border-natural-border soft-shadow">
@@ -34,6 +46,7 @@ export default function Navbar() {
                   {cartCount}
                 </span>)}
             </Link>
+            <ThemeToggle />
             <button className="md:hidden text-natural-text/70 hover:text-sage-leaf" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
             </button>

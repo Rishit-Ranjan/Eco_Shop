@@ -68,7 +68,7 @@ export default function Home() {
       </div>
 
       {/* Features */}
-      <div className="bg-[#FCFCFA] py-12 border-b border-natural-border">
+      <div className="bg-[#FCFCFA] dark:bg-dark-bg py-12 border-b border-natural-border dark:border-dark-border transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center">
@@ -115,24 +115,24 @@ export default function Home() {
       </div>
 
       {/* Latest Products */}
-      <div className="bg-natural-stone py-16">
+      <div className="bg-natural-stone dark:bg-dark-surface/50 py-16 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-8">
-            <h2 className="text-3xl font-serif font-semibold text-sage-dark">Latest Products</h2>
+            <h2 className="text-3xl font-serif font-semibold text-sage-dark dark:text-sage-leaf">Latest Products</h2>
             <Link to="/products" className="text-sage-leaf hover:text-sage-dark font-medium">View All &rarr;</Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {latestProducts.map((product) => (<div key={product.id} className="bg-[#FCFCFA] rounded-[32px] soft-shadow border border-natural-border overflow-hidden hover:soft-shadow transition flex flex-col">
+            {latestProducts.map((product) => (<div key={product.id} className="bg-[#FCFCFA] dark:bg-dark-bg rounded-[32px] soft-shadow border border-natural-border dark:border-dark-border overflow-hidden hover:soft-shadow transition flex flex-col">
                 <Link to={`/product/${product.id}`} className="block relative aspect-square overflow-hidden group">
                   <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition duration-300"/>
                 </Link>
                 <div className="p-5 flex flex-col flex-grow">
                   <Link to={`/product/${product.id}`} className="block hover:text-sage-leaf">
-                    <h3 className="text-lg font-semibold text-sage-dark mb-1">{product.name}</h3>
+                    <h3 className="text-lg font-semibold text-sage-dark dark:text-dark-text mb-1">{product.name}</h3>
                   </Link>
-                  <p className="text-natural-text/70 text-sm mb-4 line-clamp-2">{product.description}</p>
+                  <p className="text-natural-text/70 dark:text-dark-text/60 text-sm mb-4 line-clamp-2">{product.description}</p>
                   <div className="mt-auto flex items-center justify-between">
-                    <span className="text-xl font-serif font-semibold text-sage-dark">₹{Math.round(product.price)}</span>
+                    <span className="text-xl font-serif font-semibold text-sage-dark dark:text-sage-leaf">₹{Math.round(product.price)}</span>
                     <button onClick={() => addToCart(product)} className="bg-sage-leaf text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-sage-leaf-hover transition">
                       Add to Cart
                     </button>

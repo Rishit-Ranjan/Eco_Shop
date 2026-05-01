@@ -17,18 +17,24 @@
 
   /* Dark Mode Variables */
   --color-dark-bg: #1a1a15;
+  --color-dark-surface: #24241d;
   --color-dark-text: #edebe4;
   --color-dark-border: #4a5246;
 }
 
+/* Force Tailwind to use the .dark class for dark mode instead of system preference */
+@variant dark (&:where(.dark, .dark *));
+
 @layer base {
-  body {
-    background-color: var(--color-natural-bg);
-    color: var(--color-natural-text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  :root.dark {
+    color-scheme: dark;
   }
 
-  .dark body {
+  body {
+    @apply bg-natural-bg text-natural-text transition-colors duration-300;
+  }
+  
+  :root.dark body {
     background-color: var(--color-dark-bg);
     color: var(--color-dark-text);
   }
